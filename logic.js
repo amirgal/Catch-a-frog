@@ -1,5 +1,6 @@
 const Game = () => {
     let frogID = 0
+    gLevel = 0
     const _colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
     '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
 		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
@@ -23,8 +24,9 @@ const Game = () => {
         }
     }
     
-    const levelUp = level => {
-        for (let i=0; i < level; i++){
+    const levelUp = () => {
+        gLevel++
+        for (let i=0; i < gLevel; i++){
             _frogs.push(newFrog())
         }
     }

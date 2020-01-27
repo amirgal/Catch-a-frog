@@ -8,7 +8,7 @@ const Renderer = () => {
             frogElem.css('color',`${frog.color}`)
             frogElem.css('top',`${frog.y}px`)
             frogElem.css('left',`${frog.x}px`)
-            frogElem.css('font-size',`${frog.y/5}px`)
+            frogElem.css('font-size',`${frog.y/4}px`)
             container.append(frogElem)
         }
     }

@@ -1,6 +1,8 @@
 const Renderer = () => {
     const renderFrogs = frogs => {
+        // $('#level').empty()
         $('#container').empty()
+        $('#frogs-left').empty()
         const container = $('#container')
         
         for(let frog of frogs) {
@@ -11,6 +13,8 @@ const Renderer = () => {
             frogElem.css('font-size',`${frog.y/4}px`)
             container.append(frogElem)
         }
+        $('#frogs-left').append(`<p>${frogs.length} Frogs Left<p>`)
+        // $('#level').append(`<p>Level: ${frogs.length}<p>`)
     }
     return {renderFrogs}
 }

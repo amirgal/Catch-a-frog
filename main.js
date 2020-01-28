@@ -1,7 +1,10 @@
 const game = Game()
 const renderer = Renderer()
 game.levelUp()
-renderer.renderFrogs(game.getFrogs())
+
+$('#startBtn').on('click', function () {
+    renderer.renderFrogs(game.getFrogs())
+})
 
 $('#container').on('click','.frog', function() {
     if(1 == game.getFrogs().length){

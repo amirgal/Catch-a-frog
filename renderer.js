@@ -1,6 +1,5 @@
 const Renderer = () => {
     const renderFrogs = frogs => {
-        // $('#level').empty()
         $('#container').empty()
         $('#frogs-left').empty()
         const container = $('#container')
@@ -14,8 +13,15 @@ const Renderer = () => {
             container.append(frogElem)
         }
         $('#frogs-left').append(`<p>${frogs.length} Frogs Left<p>`)
-        // $('#level').append(`<p>Level: ${frogs.length}<p>`)
+        
     }
-    return {renderFrogs}
+
+    const renderLevel = gLevel => {
+        $('#level').empty()
+        $('#level').append(`<p>Level: ${gLevel}<p>`)
+    }
+
+    
+    return {renderFrogs,renderLevel}
 }
    

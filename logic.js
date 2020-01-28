@@ -39,6 +39,8 @@ const Game = () => {
             }
         }
     }
+
+    const getLevel = () => gLevel
     
-    return {getFrogs,removeFrog,levelUp}
+    return {getFrogs,removeFrog,levelUp,getLevel}
 }

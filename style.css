@@ -7,11 +7,16 @@ body {
 #time-bar {
     display: grid;
     background-color: darkgreen;
+    width: 100%;
     align-content: center;
-    justify-content: center;
+    justify-items: center;
+    color: white;
 }
 
-
+#timer {
+    /* color: white; */
+    display: inline;
+}
 
 #container {
     background-color: rgb(174, 231, 76);
@@ -23,8 +28,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    
+    color: white;
 }
+
+
 
 #startBtn {
     align-self: stretch;
@@ -33,5 +40,4 @@ body {
 
 .frog {
     position: absolute;
-    
 }

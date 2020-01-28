@@ -1,7 +1,5 @@
 const game = Game()
 const renderer = Renderer()
-// let counter = 0
-
 
 $('#startBtn').on('click', function () {
     game.levelUp()

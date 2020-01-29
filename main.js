@@ -15,8 +15,8 @@ $('#startBtn').on('click', function () {
         counter--
         if(counter < 0) {
             clearInterval(timer)
-            $('#container').append(`<h1 id="game-over">Game Over!<h1>`)
             renderer.renderFrogs([])
+            $('#container').append(`<h1 id="game-over">Game Over!<h1>`)
             return
         } else {
             $('#time').text(counter)

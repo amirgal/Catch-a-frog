@@ -17,7 +17,7 @@ $('#container').on('click','.frog', function() {
         game.levelUp()
         renderer.renderFrogs(game.getFrogs())
         renderer.renderLevel(game.getLevel())
-        startCountDown(-1)
+        startCountDown(0)
         counter = game.getLevel()+1
         startCountDown(counter)
     } else {  
@@ -38,6 +38,8 @@ const startCountDown = function(counter) {
         }
     },1000)
 }
+
+//TODO: dont call startcountdown every level up but manage the counter
 
 
 

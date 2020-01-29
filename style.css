@@ -41,3 +41,9 @@ body {
 .frog {
     position: absolute;
 }
+
+#game-over {
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+}

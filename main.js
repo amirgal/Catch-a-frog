@@ -8,7 +8,19 @@ $('#startBtn').on('click', function () {
     renderer.renderLevel(game.getLevel())
     $('#startBtn').attr('disabled',true)
     counter = game.getLevel()+1
-    startCountDown(counter)
+    
+    $('#time').text(counter)
+    const timer = setInterval(function() {
+        counter--
+        if(counter < 0) {
+            clearInterval(timer)
+            $('#container').append(`<h1 id="game-over">Game Over!<h1>`)
+            return
+        } else {
+            $('#time').text(counter)
+        }
+    },1000)
+    
 })
 
 $('#container').on('click','.frog', function() {
@@ -17,29 +29,14 @@ $('#container').on('click','.frog', function() {
         game.levelUp()
         renderer.renderFrogs(game.getFrogs())
         renderer.renderLevel(game.getLevel())
-        startCountDown(0)
         counter = game.getLevel()+1
-        startCountDown(counter)
+
     } else {  
         game.removeFrog($(this).data().id)
         renderer.renderFrogs(game.getFrogs())
     }
 })
 
-const startCountDown = function(counter) {
-    $('#time').text(counter)
-    const timer = setInterval(function() {
-        counter--
-        if(counter < 0) {
-            clearInterval(timer)
-            return
-        } else {
-            $('#time').text(counter)
-        }
-    },1000)
-}
-
-//TODO: dont call startcountdown every level up but manage the counter
 
 
 
